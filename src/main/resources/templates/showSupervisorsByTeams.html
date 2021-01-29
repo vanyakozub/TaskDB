@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>List of supervisor</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>admUserID</th>
+        <th>teamID</th>
+        <th>isDeleted</th>
+    </tr>
+    <tr th:each="supervisorsByTeams : ${supervisors_by_teams}">
+        <td th:text="${SupervisorsByTeams.id}"></td>
+        <td th:text="${SupervisorsByTeams.admUserID}"></td>
+        <td th:text="${SupervisorsByTeams.teamID}"></td>
+        <td th:text="${SupervisorsByTeams.osDeleted}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
